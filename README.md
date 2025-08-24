@@ -1,17 +1,20 @@
 # Hi, I'm Andrew 👋
 
-## About Me
-Passionate about coding | Learning web development
+## 🚀 About Me
+- Passionate about coding  
+- Currently learning **web development**  
 
-## Projects
-- Project 1
-- showcase
-## License
+## 📂 Projects
+Here are some of my works:
 
+| Name      | Description             | Link |
+|-----------|-------------------------|------|
+| Project 1 | First showcase project  | [View](#) |
+| Showcase  | Portfolio of my work    | [View](#) |
+
+## 📜 License
 This project is licensed under the [MIT License](LICENSE).
 
-
-## Contact Me
-
-- 📧 Email: [knsmndrw@gmail.com](mailto:knsmndrw@gmail.com)
+## 📬 Contact Me
+- 📧 Email: [knsmndrw@gmail.com](mailto:knsmndrw@gmail.com)  
 - 🐱 GitHub: [andree969](https://github.com/andree969)
