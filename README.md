@@ -9,7 +9,6 @@ Here are some of my works:
 
 | Name      | Description             | Link |
 |-----------|-------------------------|------|
-| Project 1 | First showcase project  | [View](#) |
 | Showcase  | Portfolio of my work    | [View](#) |
 
 ## 📜 License
