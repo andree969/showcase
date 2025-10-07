@@ -4,19 +4,18 @@
   const messageInput = document.querySelector('#message');
   const msg = document.querySelector('.msg');
  userlist = document.querySelector('#userlist');
-  // Validation patterns
-  const namePattern = /^[a-zA-Z\s]{2,50}$/; // Letters and spaces, 2-50 chars
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format
+  
+  const namePattern = /^[a-zA-Z\s]{2,50}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
   contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent form from submitting
+    e.preventDefault();
 
-    // Trim input values
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
 
-    // Validation
+    
     if (!name || !email || !message) {
       msg.textContent = 'Please fill in all fields.';
       msg.style.color = 'red';
@@ -41,14 +40,14 @@
       return;
     }
 
-    // If all validations pass
+
     msg.textContent = 'Message sent successfully!';
     msg.style.color = 'green';
 
-    // Optionally, reset the form
+    
     contactForm.reset();
 
-    // Remove message after 3 seconds
+
     setTimeout(() => {
       msg.textContent = '';
     }, 3000);

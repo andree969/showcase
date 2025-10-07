@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -15,14 +15,13 @@ body {
   color: #333;
 }
 
-/* Container for consistent width */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
 }
 
-/* === HEADER === */
+
 #main {
   background: #222;
   color: #fff;
@@ -36,10 +35,10 @@ body {
 }
 
 #main .title .sub {
-  color: #f4a261; /* Accent color */
+  color: #f4a261; 
 }
 
-/* === NAVIGATION === */
+
 nav {
   background: #333;
   position: sticky;
@@ -71,7 +70,7 @@ nav ul li a.active {
   color: #f4a261;
 }
 
-/* === SECTIONS === */
+
 section {
   padding: 60px 0;
 }
@@ -82,7 +81,7 @@ section h2 {
   margin-bottom: 30px;
 }
 
-/* === HOME (About Intro) === */
+
 #home {
   background: #f4f4f4;
   text-align: center;
@@ -98,7 +97,7 @@ section h2 {
   color: #555;
 }
 
-/* === ABOUT SECTION === */
+
 #about p {
   max-width: 700px;
   margin: 0 auto;
@@ -107,7 +106,7 @@ section h2 {
   text-align: center;
 }
 
-/* === SKILLS GRID === */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -141,7 +140,6 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* === PROJECTS GRID === */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -179,7 +177,7 @@ section h2 {
   color: #555;
 }
 
-//* ===== CONTACT FORM SECTION ===== */
+
 #contact {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -201,7 +199,7 @@ section h2 {
   color: #222;
 }
 
-/* ===== FORM ELEMENTS ===== */
+
 #contact form {
   display: flex;
   flex-direction: column;
@@ -230,7 +228,7 @@ section h2 {
   max-height: 300px;
 }
 
-/* ===== SUBMIT BUTTON ===== */
+
 #contact button {
   padding: 12px;
   font-size: 1em;
@@ -247,16 +245,16 @@ section h2 {
   transform: translateY(-2px);
 }
 
-/* ===== MESSAGE DIV ===== */
+
 #contact .msg {
   text-align: center;
   font-weight: 500;
   margin-top: 5px;
   font-size: 0.95em;
-  min-height: 20px; /* prevent layout jump */
+  min-height: 20px; 
 }
 
-/* ===== VALIDATION STYLING ===== */
+
 #contact input.valid,
 #contact textarea.valid {
   border-color: green;
@@ -267,7 +265,7 @@ section h2 {
   border-color: red;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 640px) {
   #contact .container {
     padding: 20px;
@@ -278,7 +276,7 @@ section h2 {
 }
 
 
-/* === FOOTER === */
+
 #main-footer {
   background-color: #222;
   color: #fff;
@@ -292,7 +290,7 @@ section h2 {
   margin: 5px 0;
 }
 
-/* === RESPONSIVE NAVIGATION === */
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
