@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Andre /web developer</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   
@@ -87,12 +87,14 @@
   <section id="contact">
     <div class="container">
       <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+      <form id="contact-form" novalidate>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
+        <div class="msg"></div>
       </form>
+      <ul id="userlist"></ul> 
     </div>
   </section>
 
@@ -102,5 +104,6 @@
       <p>&copy; 2025 Andre | All rights reserved</p>
     </div>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
