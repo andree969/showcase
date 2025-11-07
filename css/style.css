@@ -274,6 +274,34 @@ section h2 {
     font-size: 0.95em;
   }
 }
+#newsletter {
+  background: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#newsletter input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  max-width: 80%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#newsletter button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#newsletter button:hover {
+  background: #555;
+}
+
 
 
 
