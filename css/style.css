@@ -140,11 +140,17 @@ section h2 {
   margin-bottom: 10px;
 }
 
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 30px;
+ 
+}
+#projects ul li a {
+  display: block;
+  text-align: center;
 }
 
 .project-item {
