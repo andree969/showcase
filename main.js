@@ -1,14 +1,18 @@
+ const supabaseUrl = "https://eoucqyrwmwqvdafylxdf.supabase.co";
+const supabaseKey = "sb_publishable_MftkeTvtO35MS9poBumgDw_JX_yY8jI";
+
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
  const contactForm = document.querySelector('#contact-form');
   const nameInput = document.querySelector('#name');
   const emailInput = document.querySelector('#email');
   const messageInput = document.querySelector('#message');
   const msg = document.querySelector('.msg');
- userlist = document.querySelector('#userlist');
+ const userlist = document.querySelector('#userlist');
   
   const namePattern = /^[a-zA-Z\s]{2,50}$/;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
     const name = nameInput.value.trim();
@@ -39,22 +43,51 @@
       msg.style.color = 'red';
       return;
     }
+const { error } = await supabase
+  .from("messages")
+  .insert([{ name, email, message }]);
 
+  if (error) {
+    msg.textContent = "Error saving message";
+    msg.style.color = "red";
+    return;
+  }
 
     msg.textContent = 'Message sent successfully!';
     msg.style.color = 'green';
 
-    
     contactForm.reset();
+ loadMessages();
 
-
-    setTimeout(() => {
+     setTimeout(() => {
       msg.textContent = '';
     }, 3000);
+    });
+
+    async function loadMessages() {
+
+  const { data, error } = await supabase
+  .from("messages")
+  .select("*")
+  .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error("Error loading messages:", error);
+    return;
+  }
+
+  userlist.innerHTML = "";
+
+  data.forEach(entry => {
+
     const li = document.createElement('li');
-    li.appendChild(document.createTextNode(`${name} : ${email} : ${message}`));
+
+    li.textContent = `${entry.name} : ${entry.email} : ${entry.message}`;
+
     userlist.appendChild(li);
-    nameInput.value = '';  
-    emailInput.value = '';
-    messageInput.value = '';
+
   });
+
+}
+loadMessages();
+
