@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function ()) {
 
   // CONTACT FORM
   const contactForm = document.querySelector('#contact-form');
@@ -36,4 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => msg.textContent = '', 3000);
   });
 
-  
+}
